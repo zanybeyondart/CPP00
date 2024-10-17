@@ -1,7 +1,7 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror
 NAME = phonebook
-SRC = ./PhoneBook.cpp ./Contacts.cpp
+SRC = ./PhoneBook.cpp ./Contact.cpp ./main.cpp
 OBJ = ${SRC:.cpp=.o}
 RED = \033[0;31m
 GREEN = \033[0;32m
