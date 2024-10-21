@@ -1,41 +1,31 @@
-#include "PhoneBook.hpp"
-
-int PrintContacts()
-{
-	return (1);
-}
-
-void	DisplayContacts()
-{
-	std::cout << std::endl;
-	std::cout << "---------------------------------------------" << std::endl;
-	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
-	std::cout << "|-------------------------------------------|" << std::endl;
-	if (PrintContacts())
-		std::cout << "|               Phonebook Empty             |" << std::endl;
-	std::cout << "---------------------------------------------" << std::endl;
-	std::cout << std::endl;
-}
+#include "main.hpp"
 
 int main ()
 {
 	std::string Input;
 	PhoneBook	Alpha;
-
-	std::cout << "---------------------------------------------" << std::endl;
-	std::cout << "|            The AWESOME PhoneBook           |" << std::endl;
-	std::cout << "---------------------------------------------" << std::endl;
 	while (1)
 	{
-		std::cout << "                Enter a Command" << std::endl;
+		std::cout << "\033[1;47;30m---------------------------------------------\033[0m" << std::endl;
+		std::cout << "\033[1;47;30m|            The AWESOME PhoneBook          |\033[0m" << std::endl;
+		std::cout << "\033[1;47;30m---------------------------------------------\033[0m" << std::endl;
+		std::cout << std::endl;
+		std::cout << "            \033[1;47;30m    Enter a Command    \033[0m" << std::endl;
 		std::cout << "                ";
 		std::cin >> Input;
 		if (Input == "EXIT")
 			break;
 		else if (Input == "SEARCH")
-			DisplayContacts();
+			Alpha.DisplayContacts();
+		else if (Input == "ADD")
+			Alpha.SetupPhonebook();
 		else
-			std::cout << "Invalid Command : ADD | SEARCH | EXIT\n" << std::endl;
+		{
+			std::cout << std::endl;
+		std::cout << "            \033[1;31;40m    Invalid Command    \033[0m" << std::endl;
+		std::cout << "            \033[1;32;40m  ADD | SEARCH | EXIT  \033[0m" << std::endl;
+			std::cout << std::endl;
+		}
 	}
 	return (0);
 }

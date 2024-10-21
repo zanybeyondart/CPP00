@@ -9,6 +9,8 @@ private:
 	std::string PhoneNumber;
 	std::string DarkestSecret;
 public:
+	int AddContact();
+	int PrintContact();
 	Contact();
 	~Contact();
 };
