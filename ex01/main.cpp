@@ -12,7 +12,7 @@ int main ()
 		std::cout << std::endl;
 		std::cout << "            \033[1;47;30m    Enter a Command    \033[0m" << std::endl;
 		std::cout << "                ";
-		std::cin >> Input;
+		std::getline(std::cin, Input);
 		if (Input == "EXIT")
 			break;
 		else if (Input == "SEARCH")

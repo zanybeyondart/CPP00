@@ -8,6 +8,7 @@ public:
 	int SetupPhonebook();
 	int DisplayContacts();
 	int PrintContacts();
+	int RequestContact();
 	PhoneBook();
 	~PhoneBook();
 };
